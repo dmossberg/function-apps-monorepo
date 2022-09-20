@@ -4,7 +4,12 @@
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - 'src/ContosoFunctionApp/*'
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
@@ -14,7 +19,7 @@ variables:
   functionAppName: 'fta-daniem-net6-windows'
 
   # Agent VM image name
-  vmImageName: 'windows-2019'
+  vmImageName: 'windows-latest'
 
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)/src/ContosoFunctionApp'
