@@ -16,7 +16,7 @@ variables:
   azureSubscription: 'daniem-fta-sub-github-sp'
 
   # Function app name
-  functionAppName: 'fta-daniem-net6-windows'
+  functionAppName: 'fta-daniem-net6-windows-nw'
 
   # Agent VM image name
   vmImageName: 'windows-latest'
